@@ -32,12 +32,26 @@
 
         <section id="galeria">
             <h2>Galeria</h2>
-            <!-- Placeholder para imagens e vídeos -->
+            <div class="gallery-container">
+                <img src="https://via.placeholder.com/300x200" alt="Imagem 1">
+                <img src="https://via.placeholder.com/300x200" alt="Imagem 2">
+                <img src="https://via.placeholder.com/300x200" alt="Imagem 3">
+            </div>
         </section>
 
         <section id="postagens">
             <h2>Postagens</h2>
-            <!-- Placeholder para o blog -->
+            <div class="blog-controls">
+                <button onclick="sortPosts('date')">Ordenar por Data</button>
+                <button onclick="sortPosts('category')">Ordenar por Categoria</button>
+                <select onchange="filterPostsByCategory(this.value)">
+                    <option value="all">Todas as Categorias</option>
+                    <option value="Geral">Geral</option>
+                    <option value="Amor">Amor</option>
+                    <option value="Viagem">Viagem</option>
+                </select>
+            </div>
+            <div id="posts-container"></div>
         </section>
 
         <section id="contato">
