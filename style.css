@@ -83,6 +83,36 @@ footer {
     padding: 1rem;
 }
 
+/* Galeria */
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-container img {
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Blog */
+.blog-controls {
+    margin-bottom: 20px;
+}
+
+.blog-controls button,
+.blog-controls select {
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+#posts-container article {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     nav ul {
@@ -92,5 +122,9 @@ footer {
 
     nav ul li {
         margin: 0.5rem 0;
+    }
+
+    .gallery-container img {
+        width: 100%;
     }
 }
