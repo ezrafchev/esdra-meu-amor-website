@@ -18,8 +18,15 @@ jobs:
       run: |
         mkdir build
         cp -R index.html style.css script.js build/
+    - name: Debug
+      run: |
+        echo "Current directory:"
+        pwd
+        echo "Contents of build directory:"
+        ls -R build
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
+        force_orphan: true
