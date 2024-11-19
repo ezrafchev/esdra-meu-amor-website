@@ -1,0 +1,8 @@
+{
+  "name": "esdra-meu-amor-website",
+  "version": "1.0.0",
+  "description": "Site pessoal para Esdra e Meu Amor",
+  "scripts": {
+    "build": "echo 'No build step required'"
+  }
+}
