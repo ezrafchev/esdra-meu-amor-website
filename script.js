@@ -8,8 +8,8 @@ const posts = [
 
 // Função para exibir posts
 function displayPosts(postsToShow) {
-    const postsContainer = document.getElementById('postagens');
-    postsContainer.innerHTML = '<h2>Postagens</h2>';
+    const postsContainer = document.getElementById('posts-container');
+    postsContainer.innerHTML = '';
     postsToShow.forEach(post => {
         postsContainer.innerHTML += `
             <article>
@@ -52,5 +52,14 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 // Inicialização
 document.addEventListener('DOMContentLoaded', function() {
     displayPosts(posts);
-    // Aqui você pode adicionar código para criar botões de ordenação e filtro
+});
+
+// Smooth scrolling para links internos
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
